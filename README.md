@@ -39,8 +39,10 @@ npm run dev
 
 Una vez hecho esto, se levantará un liveserver en localhost donde se podrá ver el sitio funcionando.
 
-- Necesito en primera instancia completar la animacion de la pagina Identity, entre sus secciones sin perder las animaciones de cada componente a medida que se mueve el scroll, tal como se ve en la pagina de referencia enviada.
-- Segundo, el Home, debe quedar como el video que envie al correo.
+## Referencias
+- Ve a la carpeta `referencias`
+- Necesito en primera instancia completar la animacion de la pagina Identity, entre sus secciones sin perder las animaciones de cada componente a medida que se mueve el scroll, tal como se ve en la pagina de referencia.
+- Segundo, el Home, debe quedar como el video.
 
 De momento esto es el avance que llevo y esta cerca del resultado pero por tiempo requiero tu ayuda. Gracias!
 
