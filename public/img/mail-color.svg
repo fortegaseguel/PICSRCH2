@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="423.193" height="39.037" viewBox="0 0 423.193 39.037">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_7825" data-name="Rectángulo 7825" width="423.193" height="39.037" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_6694" data-name="Grupo 6694" transform="translate(0 0)">
+    <g id="Grupo_6695" data-name="Grupo 6695" transform="translate(0 0)">
+      <g id="Grupo_6694-2" data-name="Grupo 6694" clip-path="url(#clip-path)">
+        <path id="Trazado_166309" data-name="Trazado 166309" d="M403.431,38.427H19.274a19.151,19.151,0,0,1,0-38.3H403.431a19.151,19.151,0,0,1,0,38.3" transform="translate(0.242 0.243)" fill="#fff"/>
+        <path id="Trazado_166310" data-name="Trazado 166310" d="M403.431,38.427H19.274a19.151,19.151,0,0,1,0-38.3H403.431a19.151,19.151,0,0,1,0,38.3Z" transform="translate(0.242 0.243)" fill="none" stroke="#fc908b" stroke-miterlimit="10" stroke-width="0.25"/>
+        <path id="Trazado_166311" data-name="Trazado 166311" d="M225.707.125H91.769v38.3H225.707a19.151,19.151,0,0,0,0-38.3" transform="translate(177.967 0.243)" fill="#f27f77"/>
+      </g>
+    </g>
+    <text id="Enter_email" data-name="Enter email" transform="translate(14.965 25.11)" fill="#f39483" font-size="20" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">En</tspan><tspan y="0" letter-spacing="-0.017em">t</tspan><tspan y="0">er email</tspan></text>
+    <text id="Get_noti_ed" data-name="Get notiﬁed" transform="translate(283.544 24.809)" fill="#fff" font-size="20" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Get </tspan><tspan y="0" letter-spacing="0.002em">n</tspan><tspan y="0">otiﬁed</tspan></text>
+  </g>
+</svg>
