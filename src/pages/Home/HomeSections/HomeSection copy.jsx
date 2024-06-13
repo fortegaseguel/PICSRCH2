@@ -69,7 +69,7 @@ function HomeSection() {
         <h1 className="relative font-chillax text-7xl md:text-logo mx-auto cursor-pointer">
           <div className="flex justify-center">
             <span className={hasScrolled ? 'text-black' : 'text-white'}>P</span>
-            {text.split("").map((letter, index) => (
+            {/* {text.split("").map((letter, index) => (
               <motion.div
                 key={index}
                 className="relative inline-block z-10"
@@ -85,7 +85,7 @@ function HomeSection() {
               onClick={ toggleMenu }>
                 {letter}
               </motion.div>
-            ))}
+            ))} */}
             <div className={hasScrolled ? 'hidden' : 'block'} >
               <div className="absolute justify-center items-center inset-0 font-chillax text-7xl text-[#DFDEEA] md:text-logo -left-7 -top-32 cursor-pointer">
                 <HomeLogo onLogoAnimationComplete={() => setAnimationComplete(true)} />

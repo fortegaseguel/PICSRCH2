@@ -1,15 +1,14 @@
-import React from 'react';
-import Header from '../../components/Header';
-import HomeSection from './HomeSections/HomeSection';
-import ScrollIndicator from '../../components/ScrollIndicator';
+"use client";
+import ScrollingText from "./HomeSections/ScrollingText";
+// import ScrollIndicator from "../../components/ScrollIndicator";
 
-function Home() {
+export default function Home() {
   return (
     <>
-      <HomeSection />
-      <ScrollIndicator />
+      <div data-scroll-container>
+        <ScrollingText />
+      </div>
+      {/* <ScrollIndicator /> */}
     </>
   );
 }
-
-export default Home;

@@ -5,55 +5,55 @@
 /* F O N T S */
 
 @font-face {
-  font-family: 'Author-Medium';
-  src: url('/fonts/Author-Medium.ttf') format('truetype');
+  font-family: "Author-Medium";
+  src: url("/fonts/Author-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Author-Bold';
-  src: url('/fonts/Author-Bold.ttf') format('truetype');
+  font-family: "Author-Bold";
+  src: url("/fonts/Author-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Chillax-Semibold';
-  src: url('/fonts/Chillax-Semibold.ttf') format('truetype');
+  font-family: "Chillax-Semibold";
+  src: url("/fonts/Chillax-Semibold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'DIN-Condensed-Bold';
-  src: url('/fonts/DIN-Condensed-Bold.ttf') format('truetype');
+  font-family: "DIN-Condensed-Bold";
+  src: url("/fonts/DIN-Condensed-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Futura-CondensedMedium';
-  src: url('/fonts/Futura-CondensedMedium.ttf') format('truetype');
+  font-family: "Futura-CondensedMedium";
+  src: url("/fonts/Futura-CondensedMedium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Monserrat-Regular';
-  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-family: "Monserrat-Regular";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Monserrat-Bold';
-  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-family: "Monserrat-Bold";
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Mshtakan-Regular';
-  src: url('/fonts/Mshtakan-01.ttf') format('truetype');
+  font-family: "Mshtakan-Regular";
+  src: url("/fonts/Mshtakan-01.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -90,3 +90,16 @@
 .hover-effect:hover .default-text {
   opacity: 0;
 }
+
+/* LOCOMOTIVE SCROLL CSS  */
+
+/* html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+[data-scroll-container] {
+  height: 100vh;
+  overflow: hidden;
+} */
