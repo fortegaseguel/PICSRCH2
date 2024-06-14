@@ -3,23 +3,26 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ScrollingText.css";
 
+import { useMenuContext } from "../../../MenuContext";
+import Menu from "../../../components/Menu";
+
 const ScrollingText = () => {
+  const { toggleMenu } = useMenuContext();
+
   const textContainerRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const backgroundSlideRef = useRef(null);
+  ScrollTrigger.clearScrollMemory();
+  window.history.scrollRestoration = "manual";
 
   const preventScroll = (event) => {
     event.preventDefault();
   };
-
   useEffect(() => {
     scrollContainerRef.current.addEventListener("wheel", preventScroll);
-
     setTimeout(() => {
       scrollContainerRef.current.removeEventListener("wheel", preventScroll);
     }, 4000);
-
-
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -32,7 +35,7 @@ const ScrollingText = () => {
 
     gsap.fromTo(
       firstSpan,
-      { x: "36vw", padding: "50vw" },
+      { x: "25vw", padding: "50vw" },
       {
         padding: "0",
         x: 0,
@@ -42,7 +45,7 @@ const ScrollingText = () => {
           start: "top top",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
+          markers: false,
         },
       }
     );
@@ -59,19 +62,23 @@ const ScrollingText = () => {
           start: "top top",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
+          markers: false,
+        },
+        onComplete: function () {
+          console.log("Animation completed!");
+          toggleMenu();
         },
       }
     );
   }, []);
-
   return (
     <>
+      <div className="background-transition-opacity"></div>
       <div
         className="background-transition-slide"
         ref={backgroundSlideRef}
       ></div>
-      <div className="scroll-container" ref={scrollContainerRef}>
+      <div className="scroll-container font-chillax" ref={scrollContainerRef}>
         <div className="text-container" ref={textContainerRef}>
           <span className="first-letter-container text">
             <span className="first-letter">P</span>
@@ -85,6 +92,8 @@ const ScrollingText = () => {
           <span className="text">H</span>
         </div>
       </div>
+
+      <Menu />
     </>
   );
 };

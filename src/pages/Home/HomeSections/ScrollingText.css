@@ -7,6 +7,17 @@
   backdrop-filter: invert(100%);
 }
 
+.background-transition-opacity {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  background: #000;
+  animation: opacityAnimation 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67) .4s 1 forwards;
+  pointer-events: none;
+}
+
 .scroll-container {
   background-color: lightcoral;
   height: 400vh;
@@ -19,8 +30,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scroll-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .text-container {
@@ -32,14 +43,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20vw;
+  font-size: 14vw;
   font-weight: 900;
   color: white;
   text-overflow: clip;
 }
 
-span {
-}
 
 .first-letter-container {
   position: relative;
@@ -54,7 +63,7 @@ span {
 .first-letter-animation {
   position: absolute;
   transform: translate(-100%);
-  animation: loadingSpan 5s cubic-bezier(0.17, 0.67, 0.83, 0.67) 1;
+  animation: loadingSpan 5s cubic-bezier(0.17, 0.67, 0.83, 0.67) .4s 1 forwards;
   color: white;
 }
 
@@ -66,5 +75,14 @@ span {
   }
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes opacityAnimation {
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

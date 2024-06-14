@@ -91,15 +91,17 @@
   opacity: 0;
 }
 
-/* LOCOMOTIVE SCROLL CSS  */
-
-/* html,
-body {
-  height: 100%;
-  overflow: hidden;
+@keyframes opacityFrom0To1 {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-[data-scroll-container] {
-  height: 100vh;
-  overflow: hidden;
-} */
+.opacity-delay--400 {
+  opacity: 0;
+  animation: opacityFrom0To1 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0.4ms 1
+    forwards;
+}
