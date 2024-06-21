@@ -5,7 +5,7 @@ import Footer from '/src/components/Footer';
 
 function BrandsSection() {
   return (
-    <div className="flex flex-col justify-center h-screen bg-[#FFFFFF] w-full">
+    <div className="flex flex-col justify-center h-screen bg-[#FFFFFF] w-full opacity-delay--400">
       <div className="flex-grow relative flex flex-row items-center justify-center -mb-[100px]">
         {/* Logos Grid */}
         <div className="grid grid-cols-3 gap-1 w-[70%] pt-24" style={{ gridTemplateRows: 'repeat(5, minmax(150px, auto))' }}>
@@ -57,14 +57,14 @@ function BrandsSection() {
         <SubscriptionForm buttonColor="#000000" textColor="#000000" />
       </div>
 
-      <div className="flex justify-start items-center pb-20 pl-48 -mt-96">
-        <div className="w-2/3 flex items-end transform scale-150">
-          <div className="flex items-end">
-            <img className="w-full z-10"
+      <div className="flex justify-start items-center -mt-48 ">
+        <div className="w-full flex items-end">
+          <div className="w-full flex items-end">
+            <img className="w-1/4 z-10 -mb-10"
               src="/img/brands-astro.svg"
               alt="Astro"
             />
-            <h1 className="font-futura text-[170px] text-left tracking-play leading-none" style={{ color: '#DFDEEA', marginLeft: '-8rem' }}>#05</h1>
+            <h1 className="font-futura text-[14rem] text-left tracking-play leading-none text-black" style={{ opacity:.2, marginLeft: '-8rem',marginBottom: "1vh" }}>#05</h1>
           </div>
         </div>
       </div>
