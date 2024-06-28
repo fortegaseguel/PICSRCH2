@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./ScrollingText.css";
-
 import { useMenuContext } from "../../../MenuContext";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Menu from "../../../components/Menu";
+import { gsap } from "gsap";
+import "./ScrollingText.css";
 
 const ScrollingText = () => {
   const { toggleMenu } = useMenuContext();
@@ -77,6 +76,7 @@ const ScrollingText = () => {
   }, []);
   return (
     <>
+      <Menu />
       <div className="background-transition-opacity"></div>
       <Menu />
       <div

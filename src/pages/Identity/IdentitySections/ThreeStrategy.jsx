@@ -106,7 +106,7 @@ const IdentitySection = ({ sendDataToParent }) => {
       gsap.fromTo(
         imageRef.current,
         {
-          x: screenWidth / 8, // aca cambia la direccion
+          x: screenWidth / 5, // aca cambia la direccion
         },
         {
           x: 0,
@@ -142,6 +142,7 @@ const IdentitySection = ({ sendDataToParent }) => {
       {/* <div className="bg-[#0061FF] h-screen"></div> */}
       <div
         id="identity"
+        data-scroll-container
         ref={sectionRef}
         className={`h-[300vh] w-full duration-500	 transition ease-in-out	 ${
           isInView ? "bg-[#EFD3E9]" : "bg-white"
@@ -155,7 +156,7 @@ const IdentitySection = ({ sendDataToParent }) => {
                 className="absolute "
                 style={{
                   top: "7%",
-                  right: "25%",
+                  right: "45%",
                 }}
                 ref={pageNumberRef}
               >
@@ -171,14 +172,14 @@ const IdentitySection = ({ sendDataToParent }) => {
                   #03
                 </h1>
               </div>
-              <div className="absolute top-[30%] right-[0]" ref={imageRef}>
+              <div className="absolute top-[15%] -right-[15%]" ref={imageRef}>
                 <img
                   style={{
                     "--bluehamhamBounce-delay": "400ms",
                   }}
                   src="/img/strategy.svg"
                   alt="Space Identity"
-                  className={`h-[30vw] scale-0	 ${
+                  className={`h-[35vw] scale-0 mr-60	 ${
                     isInView ? "bluehamhamBounce" : ""
                   }`}
                 />

@@ -5,8 +5,8 @@ function WhoWeAreSection() {
   return (
     <section className="font-din tracking-extra flex flex-col items-center justify-center h-[120vh]">
       <div
-        className="w-[50%] relative "
-        style={{ top: "-120px" }}
+        className="w-[35%] relative top-[-100px] "
+        style={{}}
       >
         <motion.img
           className="bluehamhamBounce"
@@ -26,12 +26,12 @@ function WhoWeAreSection() {
           //   stiffness: 400,
           //   duration: 10,
           // }}
-          src="/img/Whoarewe.svg"
+          src="/img/whoarewe_ok.svg"
           alt="Who are we"
         />
-        <div className="overflow-hidden	">
 
-        <h1 className="text-5xl text-center text-slide slide-up w-full	">WHO ARE WE?</h1>
+        <div className="overflow-hidden mt-10	">
+          <h1 className="text-5xl text-center text-slide slide-up w-full">WHO ARE WE?</h1>
         </div>
       </div>
     </section>

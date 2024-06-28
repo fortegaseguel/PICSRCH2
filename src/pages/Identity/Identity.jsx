@@ -3,12 +3,12 @@
 import Header from "../../components/Header";
 import Menu from "../../components/Menu";
 import WhoWeAreSection from "./IdentitySections/WhoWeAreSection";
-
 import OneIdentity from "./IdentitySections/OneIdentity";
 import TwoResearch from "./IdentitySections/TwoResearch";
 import ThreeStrategy from "./IdentitySections/ThreeStrategy";
 import FourObjetive from "./IdentitySections/FourObjetive";
 import BrandsSection from "./IdentitySections/BrandsSection";
+
 
 import React, { useState, useEffect } from "react";
 function Identity() {
@@ -77,6 +77,8 @@ function Identity() {
         ) : (
           ""
         )}
+        <br />
+        <br />
         {fourthPageDone ? <BrandsSection /> : ""}
       </div>
 

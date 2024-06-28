@@ -1,7 +1,7 @@
 import { color } from 'framer-motion';
 import React, { useState } from 'react';
 
-const SubscriptionForm = ({ buttonColor, textColor }) => {  // Agregamos una prop llamada buttonColor
+const SubscriptionForm = ({ buttonColor, textColor }) => { 
   const [email, setEmail] = useState('');
 
   const handleSubmit = (event) => {
@@ -25,7 +25,7 @@ const SubscriptionForm = ({ buttonColor, textColor }) => {  // Agregamos una pro
         <button
           type="submit"
           className="text-white rounded-r-full px-6 focus:outline-none"
-          style={{ backgroundColor: buttonColor }}  // Usamos buttonColor para el estilo de fondo
+          style={{ backgroundColor: buttonColor }}
         >
           Get notified
         </button>

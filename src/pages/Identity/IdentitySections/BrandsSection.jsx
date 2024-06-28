@@ -5,10 +5,10 @@ import Footer from '/src/components/Footer';
 
 function BrandsSection() {
   return (
-    <div className="flex flex-col justify-center h-screen bg-[#FFFFFF] w-full opacity-delay--400">
-      <div className="flex-grow relative flex flex-row items-center justify-center -mb-[100px]">
+    <div className="flex flex-col justify-center h-full bg-[#FFFFFF] w-full opacity-delay--400">
+      <div className="flex-grow relative flex flex-row items-center justify-center">
         {/* Logos Grid */}
-        <div className="grid grid-cols-3 gap-1 w-[70%] pt-24" style={{ gridTemplateRows: 'repeat(5, minmax(150px, auto))' }}>
+        <div className="grid grid-cols-3 gap-1 w-[70%]" style={{ gridTemplateRows: 'repeat(5, minmax(80px, auto))' }}>
           {/* Primera fila: 3 cajas */}
           <div className="flex justify-center items-center ">
             <img src="/img/logos/Dimension.png" alt="Dimension logo" className="w-32" />
@@ -53,14 +53,14 @@ function BrandsSection() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center h-[20%] pb-20">
+      <div className="flex justify-center items-center z-10">
         <SubscriptionForm buttonColor="#000000" textColor="#000000" />
       </div>
 
-      <div className="flex justify-start items-center -mt-48 ">
+      <div className="flex justify-start items-center -mt-72 -mb-5">
         <div className="w-full flex items-end">
           <div className="w-full flex items-end">
-            <img className="w-1/4 z-10 -mb-10"
+            <img className="w-1/4 z-10"
               src="/img/brands-astro.svg"
               alt="Astro"
             />
@@ -70,8 +70,8 @@ function BrandsSection() {
       </div>
 
 
-
       <Footer showText={true} showIcons={true} showTextOnMobile={false} className="z-10 w-full" />
+
     </div>
   );
 }

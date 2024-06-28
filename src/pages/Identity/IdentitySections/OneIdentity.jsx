@@ -100,17 +100,13 @@ const IdentitySection = ({ sendDataToParent }) => {
     // Obtener las dimensiones de la ventana
     const screenWidth = window.innerWidth;
 
-
-
-
     // Configurar la animación con ScrollTrigger
     if (isInView) {
-      // sectionRef.current.scrollIntoView({ behavior: "smooth" });
 
       gsap.fromTo(
         imageRef.current,
         {
-          x: screenWidth / 8, // aca cambia la direccion
+          x: screenWidth / 5, // aca cambia la direccion
         },
         {
           x: 0,
@@ -160,12 +156,12 @@ const IdentitySection = ({ sendDataToParent }) => {
                 className="absolute "
                 style={{
                   top: "7%",
-                  right: "25%",
+                  right: "45%",
                 }}
                 ref={pageNumberRef}
               >
                 <h1
-                  className={` scale-0 font-futura text-[14rem] text-white ${
+                  className={` scale-0 font-futura text-[14rem] text-white  ${
                     isInView ? "bluehamhamBounce" : ""
                   }
                    `}
@@ -173,17 +169,17 @@ const IdentitySection = ({ sendDataToParent }) => {
                     opacity: ".2",
                   }}
                 >
-                  #01
+                 #01
                 </h1>
               </div>
-              <div className="absolute top-[20%] right-[0]" ref={imageRef}>
+              <div className="absolute top-[20%] -right-[10%]" ref={imageRef}> {/* Aqui */}
                 <img
                   style={{
                     "--bluehamhamBounce-delay": "400ms",
                   }}
                   src="/img/identity.svg"
                   alt="Space Identity"
-                  className={`h-[30vw] scale-0	 ${
+                  className={`h-[30vw] scale-0 mr-60	 ${
                     isInView ? "bluehamhamBounce" : ""
                   }`}
                 />

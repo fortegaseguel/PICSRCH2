@@ -13,6 +13,7 @@ module.exports = {
       },
       letterSpacing: {
         play: '0.03em',
+        menu: '0.1em',
         stretch: '-0.05em',
         custom: '0.25em',
         custom2: '0.4em',

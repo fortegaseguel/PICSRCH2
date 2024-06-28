@@ -55,7 +55,7 @@ const IdentitySection = ({ sendDataToParent }) => {
       opacity: 0,
     },
     open: {
-      width: "60%",
+      width: "75%",
       opacity: 1,
       transition: { duration: 0.5 },
     },
@@ -148,11 +148,11 @@ const IdentitySection = ({ sendDataToParent }) => {
           isInView ? "bg-white" : "bg-[#0061FF]"
         }`}
       >
-        <div className="w-full flex h-full">
+        <div className="w-full flex h-full ml-20">
           {/* left side  */}
           <div
             ref={textRef}
-            className="text-black text-2xl w-2/4  main-text mt-[200vh] flex flex-col justify-center pl-[10%]"
+            className="text-black text-2xl w-[45%] main-text mt-[200vh] flex flex-col justify-center ml-[20%]"
           >
             {/* <h1 className="font-din text-6xl md:text-7xl tracking-custom mb-4 text-['darkblue']">
               IDENTITY
@@ -166,7 +166,7 @@ const IdentitySection = ({ sendDataToParent }) => {
             >
               RESEARCH
             </motion.h1>
-            <p className="font-montserrat text-sm md:text-lg mb-4">
+            <p className="font-montserrat text-sm md:text-lg mb-4 w-[80%]">
               {phrase.split(" ").map((word, index) => {
                 return (
                   <span key={index}>
@@ -187,10 +187,10 @@ const IdentitySection = ({ sendDataToParent }) => {
             <motion.hr
               variants={width}
               animate={isTextInView ? "open" : "closed"}
-              className="border border-black   mb-4 md:w-[60%]"
+              className="border border-black mb-4"
             />
 
-            <p className="font-mshtakan text-sm md:text-lg mb-4 md:w-[60%]">
+            <p className="font-mshtakan text-sm md:text-lg mb-4 md:w-[80%]">
               {phraseEnglish.split(" ").map((word, index) => {
                 return (
                   <span key={index}>
@@ -212,12 +212,12 @@ const IdentitySection = ({ sendDataToParent }) => {
               animate={isTextInView ? "open" : "closed"}
               src="/img/chinese-words-black.svg"
               alt="Identity"
-              className="w-full md:w-[70%]"
+              className="w-full md:w-[85%]"
             />
           </div>
 
           {/* right side  */}
-          <div className="w-2/4 sticky h-screen	top-0 " ref={leftSectionRef}>
+          <div className="w-2/4 sticky h-screen	top-0 mr-20 " ref={leftSectionRef}>
             <div className={`w-full relative h-full `}>
               <div
                 className="absolute "
@@ -228,7 +228,7 @@ const IdentitySection = ({ sendDataToParent }) => {
                 ref={pageNumberRef}
               >
                 <h1
-                  className={` scale-0 font-futura text-[14rem] text-black ${
+                  className={` scale-0 font-futura mr-24 text-[14rem] text-black ${
                     isInView ? "bluehamhamBounce" : ""
                   }
                    `}
@@ -239,14 +239,14 @@ const IdentitySection = ({ sendDataToParent }) => {
                   #02
                 </h1>
               </div>
-              <div className="absolute top-40 right-[15vw]" ref={imageRef}>
+              <div className="absolute top-40 right-[15vw] w-full" ref={imageRef}>
                 <img
                   style={{
                     "--bluehamhamBounce-delay": "400ms",
                   }}
                   src="/img/research.svg"
                   alt="Space Identity"
-                  className={`h-[30vw] scale-0	 ${
+                  className={`h-[30vw] scale-0 ml-72	 ${
                     isInView ? "bluehamhamBounce" : ""
                   }`}
                 />
