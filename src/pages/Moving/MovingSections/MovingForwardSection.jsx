@@ -6,23 +6,46 @@ import { throttle } from 'lodash';
 function CustomShape({ x, y }) {
   return (
     <g transform={`translate(${x + 20}, ${y - 250})`}>
-      <path style={{ opacity: 1, stroke: '#000000', strokeWidth: '1px', fill: '#f8f8f8' }} d="M 0 0 C 118.3 -0.2 236.7 0 355 0.5 C 364.6 3.1 370.4 9.3 372.5 19 C 373.2 79.7 373.2 140.3 372.5 201 C 370.4 210.7 364.6 216.9 355 219.5 C 251 219.8 147 220.2 43 220.5 C 31.8 231.2 20.5 241.7 9 252 C 8 241.4 7.7 230.7 8 220 C -5.4 220.8 -13.9 214.8 -17.5 202 C -18.2 140.7 -18.2 79.3 -17.5 18 C -14.8 8.8 -9 2.8 0 0 Z"/>
+      <path
+        style={{ opacity: 1, stroke: '#000000', strokeWidth: '1px', fill: '#f8f8f8' }}
+        d="M237.3,31.2l-.9,33.7L76.4,199.7l10.3,89.8-20.5-10-40-77.5s-30.3-58.8,37-116.6c23.6-20.3,56.8-39.8,106.2-65.3,14.5-7.4,40.1-14.3,67.9,11.1"
+      />
+      <path
+        style={{ fill: '#f39483' }}
+        d="M24.1,193.9c1.3,1.1,19.1,9.9,19.1,9.9l42.4,87-19.8-10.2-40.6-77-1-9.7Z"
+      />
+      <path
+        style={{ fill: '#f39483' }}
+        d="M219.9,23.6s-15.7-11.2-39.8-1.8c-19.8,7.7-56.5,27.5-74.7,39.2-29.2,18.9-90.5,62.6-81.3,132.9,0,0-6.4-17-4.1-33.3,2.3-16.6,10.2-54.5,58.5-87.9,0,0,65.2-41,86.5-50.1,0,0,32-21.5,64.9,2.2l-10-1.3Z"
+      />
+      <path
+        style={{ stroke: '#000000', strokeMiterlimit: 10, strokeWidth: '2.5px', fill: '#fff' }}
+        d="M47.1,212.9c-9.6-19.1-8.8-44.7,2.6-75.7,5.1-13.9,20.9-34.2,41-47,26.9-17.3,82.4-49.6,111.4-63.1,10.2-4.8,31.4-7.5,42,13.2,2.5,5,3.7,10.5,3.7,16.1v63.8s2.2,23.5-27.9,34.8l-91.4,53.5s-14.8,5.2-24.8,37.9l-16.3,43.4c0,.2-.4.2-.5,0-3-5.6-30.6-58.5-39.8-77Z"
+      />
+      <path
+        style={{ fill: 'none', stroke: '#000000', strokeMiterlimit: 10, strokeWidth: '2.5px' }}
+        d="M86.8,289.5l-20.5-10-40-77.5s-30.3-58.8,37-116.6c23.6-20.3,56.8-39.8,106.2-65.3,14.5-7.4,40.1-14.3,67.9,11.1"
+      />
     </g>
   );
 }
 
-function Point({ x, y, text }) {
+function Point({ x, y, text, rotation = -30 }) {
   return (
     <g>
       <CustomShape x={x} y={y} />
-      {/* Añade el texto con saltos de línea */}
-      <foreignObject x={x} y={y - 180} width="400" height="200">
-        <div xmlns="http://www.w3.org/1999/xhtml" style={{ padding: '10px' ,textAlign: 'center', fontSize: '20px', lineHeight: '1.2' }}>
-          {text.split('\n').map((line, index) => (
-            <div key={index}>{line}</div>
-          ))}
-        </div>
-      </foreignObject>
+      <g transform={`rotate(${rotation}, ${x + 180}, ${y - 250})`}>
+        <foreignObject x={x} y={y - 200} width="220" height="150">
+          <div
+            xmlns="http://www.w3.org/1999/xhtml"
+            style={{ padding: '15px', textAlign: 'center', fontSize: '18px', lineHeight: '1.2' }}
+          >
+            {text.split('\n').map((line, index) => (
+              <div key={index}>{line}</div>
+            ))}
+          </div>
+        </foreignObject>
+      </g>
     </g>
   );
 }
@@ -36,8 +59,8 @@ function MovingForwardSection() {
   const points = useMemo(() => [
     { x: 612, y: 617, text: "Seleccionamos y trabajamos con los mejores proveedores para tus productos." },
     { x: 1455, y: 955.5, text: "Bodegas logísticas: Ubicadas en los principales puertos del mundo." },
-    { x: 874.5, y: 1267, text: "Producimos y personalizamos todo tipo de productos." },
-    { x: 612.5, y: 1699.5, text: "Coordinamos la logística de todo tipo de carga." },
+    { x: 850.5, y: 1267, text: "Producimos y personalizamos todo tipo de productos." },
+    { x: 550.5, y: 1700, text: "Coordinamos la logística de todo tipo de carga." },
     { x: 1272.5, y: 2125, text: "Tenemos Alianzas con las principales agencias navieras y aéreas. ¡Cotice con nosotros!" },
     { x: 532, y: 2531.5, text: "Negociamos tarifas de carga nacional (Port to Door)." },
     { x: 1451, y: 2941.5, text: "Gestionamos toda la documentación de importación." },

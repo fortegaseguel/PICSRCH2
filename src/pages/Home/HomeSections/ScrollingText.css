@@ -13,7 +13,7 @@
   position: fixed;
   z-index: 10;
   top: 0;
-  background: #000;
+  background: #222;
   animation: opacityAnimation 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67) .4s 1 forwards;
   pointer-events: none;
 }
@@ -39,12 +39,11 @@
   width: 100vw;
   position: fixed;
   top: 0;
-  background-color: black;
+  background-color: #222;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14vw;
-  font-weight: 900;
   color: white;
   text-overflow: clip;
 }
@@ -57,7 +56,7 @@
 .first-letter {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
-  color: black;
+  color: #222;
 }
 
 .first-letter-animation {

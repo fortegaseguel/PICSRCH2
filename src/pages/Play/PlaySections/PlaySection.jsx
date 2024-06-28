@@ -6,33 +6,8 @@ function PlaySection() {
   return (
     <>
       <section className="font-din flex flex-col justify-center items-center h-screen relative md:flex-row">
-         <motion.img 
+         <img 
           className="w-[90%] md:w-[40%]"
-          initial={{ 
-            opacity: 1, 
-            y: 150 
-          }}
-          animate={{ 
-            scaleX: [1.2, 1], 
-            scaleY: [0.9, 1],
-            y: [60, 0], 
-            duration: 0.5
-          }} 
-          whileHover={{
-            scaleX: [1.2, 1],
-            scaleY: [0.9, 1],
-            y: 0,
-            transition: { 
-              type: "spring",
-              stiffness: 900,
-              duration: 1,
-            },
-          }} 
-          transition={{ 
-            duration: 0.5, 
-            type: 'spring', 
-            stiffness: 500 
-          }} 
           src="/img/Play.svg" 
           alt="Play"
         />

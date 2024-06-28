@@ -5,17 +5,6 @@ import { motion } from "framer-motion";
 
 
 function ContactSection() {
-    const shakeAnimation = {
-        rotate: [0, -1, 1, -1, 1, 0],
-        x: [0, -1, 1, -1, 1, 0],
-        transition: {
-            duration: 0.5,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "linear" 
-        }
-    };
-
     return (
         <div className="font-din tracking-custom leading-3 flex flex-col min-h-screen relative overflow-hidden">
             <div className="flex flex-col justify-center items-center grow">
@@ -44,38 +33,8 @@ function ContactSection() {
                 <motion.img
                     src="img/contact.svg"
                     alt="Contacto"
-                    initial={{ 
-                        x: '-100vw', 
-                        y: '200vh',
-                        scaleX: 1,
-                        scaleY: 1,
-                        rotate: '-10deg'                
-                    }}
-                    animate={{ 
-                        x: 0, 
-                        y: 0,
-                    }}
-                    transition={{ 
-                        type: "spring", 
-                        stiffness: 100, 
-                        damping: 10, 
-                        duration: 2,
-                    }}
-                    whileHover={{
-                        scaleX: [1.2, 1],
-                        scaleY: [0.9, 1],
-                        y: -20,
-                        transition: { 
-                          type: "spring",
-                          stiffness: 900,
-                          duration: 1,
-                        },
-                    }}
                     id="contactImage"
                     className="absolute left-[-130px] md:bottom-[-25%] md:left-[-210px] w-auto max-w-[85%] max-h-[85%] rotate-[-10deg]"
-                    onAnimationComplete={() => {
-                        document.getElementById("contactImage").startAnimation(shakeAnimation);
-                    }}
                 />
             </div>
             <div className="w-full mt-auto mb-8 ml-20 md:mb-8 md:ml-0">

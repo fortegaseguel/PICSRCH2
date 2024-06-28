@@ -35,7 +35,7 @@ const Menu = () => {
             <img src="/img/logos/logo-PICSRCH-HORIZONTAl-removebg.png" alt="Logo" style={{ height: "25px" }} />
           </a>
           <div className="group text-xl" style={{ marginLeft: "auto", display: "flex", alignItems: "center" }} >
-            <span id="close" className="cursor-pointer mx-3 mt-2 text-xl tracking-custom" onClick={toggleMenu}>CLOSE</span>
+            <span id="close" className="cursor-pointer mx-3 mt-0 text-xl tracking-custom" onClick={toggleMenu}>CLOSE</span>
             <div className="relative mr-8 text-xl" onClick={toggleMenu}>
               <FontAwesomeIcon icon={faTimes} className="cursor-pointer z-10 absolute transition-opacity duration-300 opacity-100 group-hover:opacity-0 -mt-3 " />
               <FontAwesomeIcon icon={faGripLines} className="cursor-pointer z-10 absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100 -mt-3" />
@@ -77,16 +77,6 @@ const Menu = () => {
           initial="hidden"
           animate={menuOpen ? "visible" : "hidden"}
           variants={astronautVariants} 
-          whileHover={{
-            scaleX: [1.2, 1],
-            scaleY: [0.9, 1],
-            y: -20,
-            transition: { 
-              type: "spring",
-              stiffness: 900,
-              duration: 1,
-            },
-          }}
           className="absolute bottom-[-25%] right-[-30%] w-[80%] h-[50%] object-contain md:bottom-[-48%] md:right-[-42%] md:w-[120%] md:h-[120%]"
         />
         </div>

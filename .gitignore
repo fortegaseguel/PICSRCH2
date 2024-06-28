@@ -25,3 +25,4 @@ dist-ssr
 old/
 node_modules/
 aaa/
+*:Zone.Identifier

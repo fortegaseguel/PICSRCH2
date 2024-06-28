@@ -16,8 +16,8 @@ function Moving() {
       </div>
       <MainSection />
       <MovingForwardSection />
-      <ScrollIndicator />
       <Footer showText={false} />
+      <ScrollIndicator textColor='text-black' bgColor='bg-black' />
     </>
   );
 }
