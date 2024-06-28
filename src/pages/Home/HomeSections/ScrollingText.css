@@ -86,3 +86,8 @@
     opacity: 0;
   }
 }
+
+.scroll-menu-trigger {
+  height: 50vh;
+  width: 100vw;
+}

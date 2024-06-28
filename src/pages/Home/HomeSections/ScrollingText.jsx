@@ -68,12 +68,17 @@ const ScrollingText = () => {
           console.log("Animation completed!");
           toggleMenu();
         },
+        onReverseComplete: () => {
+          console.log("Animation returned to start!");
+          // toggleMenu();
+        },
       }
     );
   }, []);
   return (
     <>
       <div className="background-transition-opacity"></div>
+      <Menu />
       <div
         className="background-transition-slide"
         ref={backgroundSlideRef}
@@ -93,7 +98,7 @@ const ScrollingText = () => {
         </div>
       </div>
 
-      <Menu />
+      <div className="scroll-menu-trigger"></div>
     </>
   );
 };
